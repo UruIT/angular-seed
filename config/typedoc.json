@@ -1,0 +1,20 @@
+{
+	"mode": "modules",
+	"out": "api-docs",
+	"theme": "default",
+	"name": "UruIT Angular Seed",
+	"readme": "README.md",
+	"ignoreCompilerErrors": "true",
+	"experimentalDecorators": "true",
+	"emitDecoratorMetadata": "true",
+	"target": "ES6",
+	"moduleResolution": "node",
+	"preserveConstEnums": "true",
+	"stripInternal": "true",
+	"suppressExcessPropertyErrors": "true",
+	"suppressImplicitAnyIndexErrors": "true",
+	"module": "commonjs",
+	"externalPattern": "aot/**/*.ts",
+	"excludeExternals": true,
+	"exclude": "**/+(*.spec|index).ts"
+}

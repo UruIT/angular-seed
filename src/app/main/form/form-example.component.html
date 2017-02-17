@@ -1,0 +1,47 @@
+<h1>Forms Example</h1>
+
+<form [formGroup]="form" (ngSubmit)="sendForm()">
+	<div class="form-group" [class.invalid]="isControlInvalid('firstName')">
+		<label>FirstName</label>
+		<input type="text" formControlName="firstName">
+		<span *ngIf="showControlError('firstName', 'required')" class="error">FirstName is required</span>
+	</div>
+	<div class="form-group" [class.invalid]="isControlInvalid('lastName')">
+		<label>LastName</label>
+		<input type="text" formControlName="lastName">
+		<span *ngIf="showControlError('lastName', 'required')" class="error">LastName is required</span>
+	</div>
+	<div class="form-group" [class.invalid]="isControlInvalid('email')">
+		<label>Email</label>
+		<input type="text" formControlName="email">
+		<span *ngIf="showControlError('email', 'required')" class="error">Email is required</span>
+		<span *ngIf="showControlError('email', 'email')" class="error">Email is invalid</span>
+	</div>
+	<div class="form-group" [class.invalid]="isControlInvalid('gender')">
+		<label>Gender</label>
+		<label class="check">
+			<input type="radio" formControlName="gender" value="male">
+			Male
+		</label>
+		<label class="check">
+			<input type="radio" formControlName="gender" value="female">
+			Female
+		</label>
+		<span *ngIf="showControlError('gender', 'required')" class="error">Gender is required</span>
+	</div>
+	<div class="form-group" [class.invalid]="isControlInvalid('country')">
+		<label>Country</label>
+		<select formControlName="country">
+			<option [value]="country.code" *ngFor="let country of countries">{{country.name}}</option>
+		</select>
+		<span *ngIf="showControlError('country', 'required')" class="error">Country is required</span>
+	</div>
+	<div class="form-group">
+		<label>Address</label>
+		<input type="text" formControlName="address">
+	</div>
+	<footer class="button-group">
+		<button type="button" class="btn btn-link" (click)="reset()">Reset</button><!--
+		--><button type="submit" class="btn btn-primary">Send</button>
+	</footer>
+</form>

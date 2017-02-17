@@ -1,0 +1,71 @@
+.form-group {
+	height: 75px;
+
+	&.invalid {
+		input,
+		select {
+			border-color: $red;
+		}
+
+		input:not([type="checkbox"]):not([type="radio"]),
+		select {
+			&:hover,
+			&:focus {
+				box-shadow: inset 0 0 1px $red, 0 0 2px $red;
+				border-color: $red;
+			}
+		}
+
+		.check {
+			color: $red;
+		}
+	}
+
+	label {
+		display: block;
+		line-height: 20px;
+
+		&.check {
+			display: inline-block;
+			line-height: 30px;
+		}
+	}
+
+	input,
+	select {
+		border: 1px solid $gray;
+		color: $black-1;
+		font-size: 14px;
+		line-height: 16px;
+		outline: none;
+    	position: relative;
+	}
+
+	input:not([type="checkbox"]):not([type="radio"]),
+	select {
+		height: 30px;
+		transition: all .3s;
+		width: 100%;
+
+		&:hover,
+		&:focus {
+			box-shadow: inset 0 0 1px $gray, 0 0 2px $gray;
+			border-color: $gray-2;
+		}
+	}
+
+	input {
+		padding: 6px 3px;
+	}
+
+	.error {
+		color: $red;
+		display: block;
+		font-size: 12px;
+		line-height: 20px;
+	}
+}
+
+.button-group {
+	text-align: right;
+}

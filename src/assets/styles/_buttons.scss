@@ -1,0 +1,32 @@
+.btn {
+	appearance: none;
+    cursor: pointer;
+    height: 30px;
+	outline: none;
+    min-width: 100px;
+	transition: all .3s;
+}
+
+.btn-primary {
+	background-color: $blue;
+    border: 1px solid $blue;
+    color: $white;
+
+	&:hover,
+	&:focus {
+		background-color: $blue-1;
+		border-color: $blue-1;
+	}
+}
+
+.btn-link {
+	background-color: $white;
+	border: none;
+	color: $blue;
+	font-weight: bold;
+
+	&:hover {
+		background-color: $gray-3;
+		border-color: $blue-1;
+	}
+}

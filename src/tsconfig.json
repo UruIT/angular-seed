@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"lib": ["es6", "dom"],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "../dist",
+		"sourceMap": true,
+		"target": "es5",
+		"removeComments": true,
+		"pretty": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"typeRoots": [
+			"../node_modules/@types"
+		]
+	}
+}

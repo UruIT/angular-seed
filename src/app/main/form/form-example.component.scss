@@ -1,0 +1,13 @@
+@import '../../../assets/styles/variables';
+
+form {
+    border: 1px solid $gray;
+    box-shadow: 0 0 1px $gray;
+    margin: 0 auto;
+    padding: 20px;
+	max-width: 500px;
+}
+
+.button-group .btn {
+	margin-left: 10px;
+}

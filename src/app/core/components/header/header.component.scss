@@ -1,0 +1,57 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+
+header {
+    box-shadow: 0 0 10px $gray;
+	height: 60px;
+	overflow: hidden;
+	padding: 0px 40px;
+}
+
+.logo {
+    float: left;
+	@include vertical-centered();
+}
+
+img, h1 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+img {
+	height: 40px;
+	width: 40px;
+	margin-right: 20px;
+}
+
+h1 {
+	color: $black-1;
+	line-height: 40px;
+	margin: 0;
+}
+
+nav {
+	float: right;
+}
+
+ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    line-height: 60px;
+
+	a {
+		display: block;
+		padding: 0 20px;
+		transition: background-color .3s;
+
+		&:hover,
+		&.router-link-active {
+			background-color: $gray-1;
+		}
+	}
+}

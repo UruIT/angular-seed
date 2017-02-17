@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+	color: $black-1;
+}
+
+body {
+  	margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main,
+details,
+menu {
+  	display: block;
+}
+
+a {
+	background-color: transparent;
+	color: $blue;
+	text-decoration: none;
+	-webkit-text-decoration-skip: objects;
+
+	&:active,
+	&:hover {
+		outline-width: 0;
+	}
+}
+
+b,
+strong {
+  	font-weight: bolder;
+}
+
+img {
+  	border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  	overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  	margin: 0;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  	overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  	height: auto;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  	display: none;
+}
