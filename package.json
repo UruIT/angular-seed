@@ -3,7 +3,11 @@
 	"version": "1.0.0",
 	"description": "An Angular Seed with Webpack 2, AoT, Lazy Routes, Sass, Karma, Protractor, Codelyzer, Typedocs and Yarn.",
 	"author": "UruIT <hello@uruit.com>",
-	"homepage": "https://www.uruit.com",
+	"homepage": "https://github.com/UruIT/angular-seed",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/UruIT/angular-seed.git"
+	},
 	"license": "MIT",
 	"scripts": {
 		"build:prod": "npm run clean:aot && webpack --config webpack.config.js --progress --profile --bail",

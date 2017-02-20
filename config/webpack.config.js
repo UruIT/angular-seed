@@ -194,7 +194,11 @@ var webpackConfig = (options) => {
 				logLevel: 'info'
 			}), null)
 		]),
-		devtool: isProd ? 'source-map' : 'cheap-module-source-map',
+		/**
+		 * the other source mapping styles have issues:
+		 * https://github.com/webpack/webpack/issues/2145 and https://github.com/webpack/webpack/issues/3165
+		 */
+		devtool: 'source-map',
 		performance: isProd ? { hints: "warning" } : false,
 		node: {
 			global: true,
