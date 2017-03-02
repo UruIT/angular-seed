@@ -110,7 +110,7 @@ var webpackConfig = (options) => {
 			// See: https://github.com/angular/angular/issues/11580
 			new ContextReplacementPlugin(
 				// The (\\|\/) piece accounts for path separators in *nix and Windows
-				/angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
+				/angular(\\|\/)core(\\|\/)@angular/,
 				utils.resolve('src'), // location of your src
 				{
 					// your Angular Async Route paths relative to this root directory
