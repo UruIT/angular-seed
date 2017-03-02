@@ -40,21 +40,21 @@ angular-seed/
 	|	|
     |   ├──core/                                 * core module (this module host all things that only should be imported by the app module)
     |   |   ├──components/                       * components for this feature are placed here
-	|		|	|	 ├──..
-    |       |   ├── services/                    * services that only will be consumed in this feature are placed here
-	|		|	|    ├──.../
-    |       |   ├──core.module.ts                * module definition for core module
-    |       |   ├──module-import-guard.ts        * this file ensure that this module is imported once in the app
-	|       |   ├──index.ts                      * barrel for the core module
-    |       ├──main/                             * main module
-	|       |   ├──.../	                         * all main module components
-	|	    |   ├──main-routing.module.ts        * routing module definition for main module
-	|       |   ├──main.module.ts                * module definition for main module
-	|       |   ├──index.ts                      * barrel for the main module
-	|		├──shared/
-	|       |    ├──.../                         * shared module
-	|       ├──utils/                            * utilites folder
-	|            ├──...                          * here are hosted all the static utilities that are not related with angular but are used in the application
+	|	|	|	 ├──..
+    |   |   ├── services/                        * services that only will be consumed in this feature are placed here
+	|	|	|    ├──.../
+    |   |   ├──core.module.ts                    * module definition for core module
+    |   |   ├──module-import-guard.ts            * this file ensure that this module is imported once in the app
+	|   |   ├──index.ts                          * barrel for the core module
+    |   ├──main/                                 * main module
+	|   |   ├──.../	                             * all main module components
+	|	|   ├──main-routing.module.ts            * routing module definition for main module
+	|   |   ├──main.module.ts                    * module definition for main module
+	|   |   ├──index.ts                          * barrel for the main module
+	|   ├──shared/
+	|   |    ├──.../                             * shared module
+	|   ├──utils/                                * utilites folder
+	|        ├──...                              * here are hosted all the static utilities that are not related with angular but are used in the application
 
 	├──.editor.config                            * editor project configuration
 	├──.gitignore                                * git ignore file
