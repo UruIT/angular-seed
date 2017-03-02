@@ -46,17 +46,25 @@ angular-seed/
     |   |   ├──core.module.ts                    * module definition for core module
     |   |   ├──module-import-guard.ts            * this file ensure that this module is imported once in the app
 	|   |   ├──index.ts                          * barrel for the core module
+    |   |
     |   ├──main/                                 * main module
 	|   |   ├──.../	                             * all main module components
 	|	|   ├──main-routing.module.ts            * routing module definition for main module
 	|   |   ├──main.module.ts                    * module definition for main module
 	|   |   ├──index.ts                          * barrel for the main module
-	|   ├──shared/
+    |   |
+    |   ├──shared/
 	|   |    ├──.../                             * shared module
-	|   ├──utils/                                * utilites folder
-	|        ├──...                              * here are hosted all the static utilities that are not related with angular but are used in the application
-
-	├──.editor.config                            * editor project configuration
+    |   |
+    |   ├──utils/                                * utilites folder
+	|   |    ├──...                              * here are hosted all the static utilities that are not related with angular but are used in the application
+	|   ├──app-routing.module.ts                 * app routing module
+	|   ├──app.module.ts                         * app module
+	|   ├──app.component.html                    * app component html template
+	|   ├──app.component.ts                      * app component 
+	|   ├──app.component.scss                    * app component sass styles
+    |
+    ├──.editor.config                            * editor project configuration
 	├──.gitignore                                * git ignore file
 	├──karma.conf.js                             * karma configuration file, just require the config/karma.conf.js
 	├──protractor.config.js                      * protractor configuration file, just require the config/protractor.conf.js
