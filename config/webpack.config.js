@@ -66,7 +66,7 @@ var webpackConfig = (options) => {
 					exclude: [utils.resolve('src', 'assets')]
 				},
 				{ test: /\.html$/, use: 'raw-loader', exclude: [utils.resolve('src/index.html')] },
-				{ test: /\.(jpg|png|gif)$/, use: 'file-loader' },
+				{ test: /\.(jpg|png|gif|svg)$/, use: 'file-loader' },
 
 				// Development
 				ifDev({ test: /\.css$/, use: ['style-loader', 'css-loader'], include: [utils.resolve('src', 'assets')] }, null),
