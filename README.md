@@ -1,7 +1,7 @@
 # UruIT Angular Seed
 
 > This repo hosts an angular-seed built with the recommendations and best practices followed in UruIT.
-The idea is to have a starting point for new projects build with Angular.
+The idea is to have a starting point for new projects built with Angular.
 Here you will find samples of [Lazy Routes](https://angular.io/docs/ts/latest/guide/router.html#!#asynchronous-routing), [AoT compilation](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), [form handling](https://angular.io/docs/ts/latest/guide/reactive-forms.html) among other things.
 The project uses [Webpack 2](https://webpack.js.org/), [Sass](http://sass-lang.com/), [Karma](https://karma-runner.github.io), [Protractor](http://www.protractortest.org/), [Codelyzer](https://github.com/mgechev/codelyzer), [Typedocs](http://typedoc.org/) and [Yarn](https://yarnpkg.com).
 
