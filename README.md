@@ -5,6 +5,12 @@ The idea is to have a starting point for new projects built with angular.
 Here you will find samples of lazy routes, aot compilation, form manipulation among other things.
 This project uses Webpack 2, Sass, Karma, Protractor, Codelyzer, Typedocs and Yarn.
 
+## Documentation
+
+* [File structure] (docs/file_structure.md)
+* [Configuration] (docs/configuration.md)
+* [Contributing] (docs/contributing.md)
+
 
 # Getting Started
 
@@ -80,11 +86,3 @@ available via `npm run-script`:
   webdriver:update
     webdriver-manager update
 ```
-
-
-## See our docs
-
-* [File structure] (docs/file_structure.md)
-* [Configuration] (docs/configuration.md)
-* [Contributing] (docs/contributing.md)
-
