@@ -1,7 +1,7 @@
 
 # Getting Started
 
-First at all, we recommend taking a look at our file structure section to see what you can find here.
+First at all, we recommend taking a look at our [file structure](docs/file_structure.md) section to see what you can find here.
 Then we can start playing with the code.
 
 ## How to run?
