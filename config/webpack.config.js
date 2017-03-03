@@ -122,7 +122,7 @@ var webpackConfig = (options) => {
 				{ from: utils.resolve('src/favicon.ico') }
 			]),
 
-			new NormalModuleReplacementPlugin(/.\/app-config/, utils.resolve("./src/app/shared/config/app-config." + environment)),
+			new NormalModuleReplacementPlugin(/.\/app-config/, utils.resolve("./src/app/shared/config/app-config." + environment + ".ts")),
 
 			new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'defer' }),
 
