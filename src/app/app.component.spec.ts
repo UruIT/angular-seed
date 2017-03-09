@@ -13,7 +13,7 @@ describe(`App`, () => {
 			declarations: [AppComponent],
 			schemas: [NO_ERRORS_SCHEMA]
 		})
-			.compileComponents(); // compile template and css
+		.compileComponents(); // compile template and css
 	}));
 
 	// synchronous beforeEach

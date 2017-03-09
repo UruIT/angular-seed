@@ -39,6 +39,7 @@ export class FormExampleComponent implements OnInit {
 		}
 
 		console.log(this.form.value);
+		console.log('Form successfully submited');
 	}
 
 	showControlError(control: string, error: string): boolean {

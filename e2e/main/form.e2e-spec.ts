@@ -1,5 +1,6 @@
-import { FormPo } from './form.po';
-import { browser } from "protractor/built";
+import {FormPo} from './form.po';
+import {browser} from "protractor/built";
+import {protractor} from "protractor/built/ptor";
 
 describe('Form route', () => {
 	beforeEach(() => {
@@ -43,38 +44,41 @@ describe('Form route', () => {
 				const result = 'invalid';
 				const result2 = 'error';
 
+				// First Name expectations
 				const inputFirstName = FormPo.getInputByControlName('firstName');
-				const controlFirstName = FormPo.getInputFormGroup(inputFirstName);
-				let subject = controlFirstName.getAttribute('class');
+				let subject =  FormPo.getInputFormGroup(inputFirstName).getAttribute('class');
 				expect(subject).toContain(result);
 
 				const inputFirstNameError = FormPo.getInputError(inputFirstName);
 				subject = inputFirstNameError.getAttribute('class');
 				expect(subject).toContain(result2);
+
 				subject = inputFirstNameError.getText();
 				let resultMesage = 'FirstName is required';
 				expect(subject).toContain(resultMesage);
 
+				// Last Name expectations
 				const inputLastName = FormPo.getInputByControlName('lastName');
-				const controlLastName = FormPo.getInputFormGroup(inputLastName);
-				subject = controlLastName.getAttribute('class');
+				subject = FormPo.getInputFormGroup(inputLastName).getAttribute('class');
 				expect(subject).toContain(result);
 
 				const inputLastNameError = FormPo.getInputError(inputLastName);
 				subject = inputLastNameError.getAttribute('class');
 				expect(subject).toContain(result2);
+
 				subject = inputLastNameError.getText();
 				resultMesage = 'LastName is required';
 				expect(subject).toContain(resultMesage);
 
+				// Email expectations
 				const inputEmail = FormPo.getInputByControlName('email');
-				const controlEmail = FormPo.getInputFormGroup(inputEmail);
-				subject = controlEmail.getAttribute('class');
+				subject = FormPo.getInputFormGroup(inputEmail).getAttribute('class');
 				expect(subject).toContain(result);
 
 				const inputEmailError = FormPo.getInputError(inputEmail);
 				subject = inputEmailError.getAttribute('class');
 				expect(subject).toContain(result2);
+
 				subject = inputEmailError.getText();
 				resultMesage = 'Email is required';
 				expect(subject).toContain(resultMesage);
@@ -86,9 +90,9 @@ describe('Form route', () => {
 				button.click();
 				const result = 'invalid';
 
+				// First Name expectations
 				const inputFirstName = FormPo.getInputByControlName('firstName');
-				const controlFirstName = FormPo.getInputFormGroup(inputFirstName);
-				let subject = controlFirstName.getAttribute('class');
+				let subject = FormPo.getInputFormGroup(inputFirstName).getAttribute('class');
 				expect(subject).not.toContain(result);
 
 				const inputLastName = FormPo.getInputByControlName('lastName');
@@ -114,17 +118,13 @@ describe('Form route', () => {
 				inputLastName.sendKeys('Snow');
 				const inputEmail = FormPo.getInputByControlName('email');
 				inputEmail.sendKeys('john.snow@winteriscomming.com');
-
 				const radioBoxGender = FormPo.getRadioByValue('male');
 				radioBoxGender.click();
-
 				FormPo.selectOption('Uruguay');
-
 				FormPo.getSubmitFormButton().click();
 
 				const inputFirstName = FormPo.getInputByControlName('firstName');
-				const controlFirstName = FormPo.getInputFormGroup(inputFirstName);
-				let subject = controlFirstName.getAttribute('class');
+				let subject = FormPo.getInputFormGroup(inputFirstName).getAttribute('class');
 				expect(subject).toContain(result);
 
 				const inputFirstNameError = FormPo.getInputError(inputFirstName);
@@ -137,12 +137,11 @@ describe('Form route', () => {
 		});
 
 		describe('Submit a valid form', () => {
-			it('it should navigate ', () => {
-				const form = FormPo.getForm();
 
+			it('it should submit the form ', () => {
+				const form = FormPo.getForm();
 				const result = 'invalid';
 				const result2 = 'error';
-
 				const inputFirstName = FormPo.getInputByControlName('firstName');
 				inputFirstName.sendKeys('John');
 				const inputLastName = FormPo.getInputByControlName('lastName');
@@ -155,10 +154,11 @@ describe('Form route', () => {
 
 				FormPo.getSubmitFormButton().click();
 
+				browser.manage().logs().get('browser').then((logs: Array<any>) => {
+					expect(logs.pop().message).toContain('Form successfully submited');
+				});
 			});
+
 		});
 	});
 });
-
-
-
