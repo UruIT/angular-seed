@@ -112,7 +112,6 @@
     "pipe-naming": [true, "camelCase", "sg"],
     "component-class-suffix": true,
     "directive-class-suffix": true,
-	"import-destructuring-spacing": true,
     "no-access-missing-member": true,
     "templates-use-public": true,
     "invoke-injectable": true
