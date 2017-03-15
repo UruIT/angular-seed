@@ -1,9 +1,9 @@
 # File structure
 
 The file structure is inspired by the [Angular Guidelines](https://angular.io/docs/ts/latest/guide/style-guide.html). We use a feature/components approach in this seed.
-This is a great way to ensure maintainable code by encapsulation our behavior logic.
+This is a great way to ensure maintainable code by encapsulating our behavior logic.
 Each feature is a self-contained app divided into components.
-Also, each file follows the single responsibility principle: style, template, specs, routing, module and component class.
+Also, each file follows the single responsibility principle: style, template, specs, routing, module or component class.
 In addition, we incorporate the use of [barrel](https://angular.io/docs/ts/latest/glossary.html#!#barrel) files (index.ts) which is a way to export several exported ES2015 modules into one module, allowing centralize your imports and therefore your code is less verbose.
 
 Here's how it looks:
@@ -61,7 +61,7 @@ angular-seed/
 	|   ├──app-routing.module.ts                 * app routing module
 	|   ├──app.module.ts                         * app module
 	|   ├──app.component.html                    * app component html template
-	|   ├──app.component.ts                      * app component 
+	|   ├──app.component.ts                      * app component
 	|   ├──app.component.scss                    * app component sass styles
     |
     ├──.editor.config                            * editor project configuration
