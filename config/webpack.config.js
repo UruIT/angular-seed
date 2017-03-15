@@ -54,7 +54,14 @@ var webpackConfig = (options) => {
 						{ loader: 'ng-router-loader', options: { loader: 'async-import', genDir: 'aot', aot: isProd } },
 						{ loader: 'awesome-typescript-loader', options: { configFileName: utils.resolve('tsconfig.webpack.json') } },
 						{ loader: 'angular2-template-loader' },
-						ifDev({ loader: 'tslint-loader', options: { configFile: utils.resolve('tslint.json') } })
+						ifDev({
+							loader: 'tslint-loader',
+							options: {
+								configFile: utils.resolve('tslint.json'),
+								project: utils.resolve('tsconfig.webpack.json'),
+								typeCheck: true
+							}
+						})
 					]),
 					exclude: [/\.(spec|e2e)\.ts$/]
 				},
@@ -122,7 +129,7 @@ var webpackConfig = (options) => {
 				{ from: utils.resolve('src/favicon.ico') }
 			]),
 
-			new NormalModuleReplacementPlugin(/.\/app-config/, utils.resolve("./src/app/shared/config/app-config." + environment)),
+			new NormalModuleReplacementPlugin(/.\/app-config/, utils.resolve("./src/app/shared/config/app-config." + environment + ".ts")),
 
 			new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'defer' }),
 
